@@ -1,4 +1,4 @@
-# 🌊 Mermaid 实时渲染器
+# 🌊 DeepSeek 的 Mermaid 渲染器
 
 一个浏览器扩展程序，可以在 deepseek 的对话页面上实时渲染 Mermaid 图表。该工具能够自动检测并渲染新添加到 DOM 中的 Mermaid 代码块，为用户提供流畅的图表使用体验。
 
