@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "Mermaid Renderer",
+  "version": "1.0",
+  "description": "Renders Mermaid diagrams in DeepSeek Chat and enables chat export",
+  "permissions": [
+    "scripting",
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://chat.deepseek.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chat.deepseek.com/*"
+      ],
+      "js": [
+        "lib/mermaid.min.js",
+        "content.js"
+      ],
+      "css": [
+        "styles/content.css"
+      ]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Mermaid Renderer"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "styles/content.css",
+        "lib/mermaid.min.js"
+      ],
+      "matches": [
+        "https://chat.deepseek.com/*"
+      ]
+    }
+  ]
+}
